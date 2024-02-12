@@ -14,3 +14,9 @@ config/name="fIRST GAME"
 run/main_scene="res://res.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2460
+window/stretch/scale=1.15
