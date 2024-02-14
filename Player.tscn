@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvom6cppbmmd8"]
+
+[ext_resource type="Texture2D" uid="uid://cito7sne1ndsy" path="res://image_2024-02-14_205314756-removebg-preview.png" id="1_7oph5"]
+[ext_resource type="Texture2D" uid="uid://d0ts3e0ira8hs" path="res://image_2024-02-14_205532705-removebg-preview.png" id="2_1mnkp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_js71h"]
+height = 36.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x1u43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7oph5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1mnkp")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(356, 126)
+shape = SubResource("CapsuleShape2D_js71h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+position = Vector2(2.12874, 0.904713)
+scale = Vector2(0.27792, 0.323649)
+sprite_frames = SubResource("SpriteFrames_x1u43")
+animation = &"Jump"
